@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "797532736455",
+    "project_id": "carraze-a0acd",
+    "storage_bucket": "carraze-a0acd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797532736455:android:ff56800cf9c39e1d48a7e2",
+        "android_client_info": {
+          "package_name": "com.example.carraze"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmnYKK_wAiWX74T2L-69YG3xvki8AisNU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
