@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 /// your widgets, themes, and styles to ensure easy updates and theming across projects.
 class AppColors {
   // ==== BRAND COLORS ====
-  static const Color primary = Color(0xFF4CAF50); // Green
+  static const Color primary = Color(0xFF121417); // Green
   static const Color secondary = Color(0xFF2196F3); // Blue
   static const Color accent = Color(0xFFFF5722); // Orange
 
