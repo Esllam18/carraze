@@ -1,4 +1,5 @@
 import 'package:carraze/core/router/app_router.dart';
+import 'package:carraze/core/utils/app_themes.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'firebase_options.dart';
@@ -18,6 +19,7 @@ class Carraze extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Carraze',
+      theme: AppTheme.darkTheme,
 
       routerConfig: router,
     );

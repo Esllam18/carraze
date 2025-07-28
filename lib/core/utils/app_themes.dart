@@ -1,9 +1,29 @@
 import 'package:flutter/material.dart';
 import '../consts/app_colors.dart'; // Your centralized color palette
 
-enum AppThemeType { modernBlue, modernTeal, pastel, neumorphic }
+enum AppThemeType { modernBlue, modernTeal, pastel, neumorphic, dark }
 
 class AppTheme {
+  static ThemeData darkTheme = ThemeData(
+    brightness: Brightness.dark,
+    scaffoldBackgroundColor: const Color(0xFF0D0D0D),
+    primaryColor: const Color(0xFF1C2526),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: const Color(0xFF1C2526),
+        foregroundColor: Colors.white,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      ),
+    ),
+    inputDecorationTheme: const InputDecorationTheme(
+      filled: true,
+      fillColor: Color(0xFF1E1E1E),
+      border: OutlineInputBorder(),
+      hintStyle: TextStyle(color: Colors.grey),
+    ),
+    textTheme: const TextTheme(bodyMedium: TextStyle(color: Colors.white)),
+  );
+
   static const String _fontFamily = 'Roboto';
 
   // Theme pairs (light/dark)
