@@ -15,7 +15,7 @@ class WelcomeView extends StatelessWidget {
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage(
-                "assets/StockCake-Sleek Black SUV_1753657938.jpg",
+                "assets/mercedes.jpg",
               ), // Replace with your image asset
               fit: BoxFit.cover,
             ),
