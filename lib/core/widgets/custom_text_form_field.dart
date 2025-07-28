@@ -25,6 +25,7 @@ class CustomTextFormField extends StatelessWidget {
         labelText: labelText,
         labelStyle: const TextStyle(color: Colors.white70),
         filled: true,
+        // ignore: deprecated_member_use
         fillColor: const Color(0xFF1C2526).withOpacity(0.8),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),

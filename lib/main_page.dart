@@ -1,3 +1,4 @@
+import 'package:carraze/features/add_car/presentation/pages/add_car_page.dart';
 import 'package:carraze/features/home/presentation/home_view_body.dart';
 
 import 'package:carraze/features/home/presentation/widgets/drawer.dart';
@@ -20,11 +21,13 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  bool isAdmin = true;
+
   @override
   Widget build(BuildContext context) {
     final List<Widget> widgetOptions = <Widget>[
       HomeBodyView(),
-      Center(child: Text('Favorites')),
+      isAdmin ? AddCarPage() : Center(child: Text('Favorites')),
       Center(child: Text('Profile')),
       Center(child: Text('Search')),
     ];
@@ -40,11 +43,17 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  // ignore: non_constant_identifier_names
   BottomNavigationBar botton_navigation_Bar() {
     return BottomNavigationBar(
-      items: const [
+      items: [
         BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-        BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Favorites'),
+        isAdmin
+            ? BottomNavigationBarItem(icon: Icon(Icons.add), label: 'Add Car')
+            : BottomNavigationBarItem(
+                icon: Icon(Icons.favorite),
+                label: 'Favorites',
+              ),
         BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
       ],

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 /// Use anywhere in your project for consistent loading indicators!
 class LoadingWidget extends StatelessWidget {
   const LoadingWidget({
-    Key? key,
+    super.key,
     this.message,
     this.color,
     this.size = 36.0,
@@ -16,7 +16,7 @@ class LoadingWidget extends StatelessWidget {
     this.margin,
     this.padding,
     this.borderRadius = 16.0,
-  }) : super(key: key);
+  });
 
   /// Optional message to display under the loader.
   final String? message;
@@ -68,6 +68,7 @@ class LoadingWidget extends StatelessWidget {
         color:
             backgroundColor ??
             (fullscreen
+                // ignore: deprecated_member_use
                 ? Colors.black.withOpacity(0.3)
                 : theme.cardColor.withOpacity(0.95)),
         borderRadius: BorderRadius.circular(borderRadius),
@@ -84,7 +85,7 @@ class LoadingWidget extends StatelessWidget {
               style:
                   textStyle ??
                   theme.textTheme.bodyMedium?.copyWith(
-                    color: theme.colorScheme.onBackground,
+                    color: theme.colorScheme.onSurface,
                   ),
             ),
           ],
@@ -97,6 +98,7 @@ class LoadingWidget extends StatelessWidget {
         children: [
           Positioned.fill(
             child: Container(
+              // ignore: deprecated_member_use
               color: backgroundColor ?? Colors.black.withOpacity(0.3),
             ),
           ),

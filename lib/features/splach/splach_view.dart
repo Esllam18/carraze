@@ -13,9 +13,10 @@ class _SplachViewState extends State<SplashView> {
   @override
   void initState() {
     super.initState();
-    // Navigate to WelcomeView after 3 seconds
+
     Future.delayed(const Duration(seconds: 3), () {
       GoRouter.of(
+        // ignore: use_build_context_synchronously
         context,
       ).replace(RouteNames.welcome); // Adjust the route as needed
     });
