@@ -13,6 +13,8 @@ class CustomTextFormField extends StatelessWidget {
     required TextEditingController controller,
     required String hint,
     required TextInputType keyboardType,
+    IconButton? suffixIcon,
+    Null Function()? onTap,
   });
 
   @override

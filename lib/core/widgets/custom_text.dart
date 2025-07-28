@@ -31,14 +31,13 @@ class CustomText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Responsive font scaling
-    final double scaledFontSize =
-        fontSize != null
-            ? MediaQuery.textScalerOf(context).scale(fontSize!)
-            : MediaQuery.textScalerOf(context).scale(
-              style?.fontSize ??
-                  Theme.of(context).textTheme.bodyLarge?.fontSize ??
-                  16,
-            );
+    final double scaledFontSize = fontSize != null
+        ? MediaQuery.textScalerOf(context).scale(fontSize!)
+        : MediaQuery.textScalerOf(context).scale(
+            style?.fontSize ??
+                Theme.of(context).textTheme.bodyLarge?.fontSize ??
+                16,
+          );
 
     final TextStyle baseStyle =
         style ??

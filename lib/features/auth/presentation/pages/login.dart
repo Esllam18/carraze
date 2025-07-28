@@ -92,9 +92,10 @@ class _LoginState extends State<Login> {
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                     onPressed: () {
-                      if (_formKey.currentState!.validate()) {
-                        // Add login logic here
-                      }
+                      // if (_formKey.currentState!.validate()) {
+                      //   // Add login logic here
+                      // }
+                      GoRouter.of(context).replace(RouteNames.home);
                     },
                   ),
                   const SizedBox(height: 10),

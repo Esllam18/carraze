@@ -1,8 +1,10 @@
 import 'dart:io';
+import 'package:carraze/core/router/route_names.dart';
 import 'package:carraze/core/widgets/custom_button.dart';
 import 'package:carraze/core/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:go_router/go_router.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -179,6 +181,7 @@ class _SignUpState extends State<SignUp> {
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
                         // Add sign up logic here
+                        GoRouter.of(context).replace(RouteNames.home);
                       }
                     },
                   ),

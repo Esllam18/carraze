@@ -1,6 +1,7 @@
 import 'package:carraze/core/router/route_names.dart';
 import 'package:carraze/features/auth/presentation/pages/login.dart';
 import 'package:carraze/features/auth/presentation/pages/sign_up.dart';
+import 'package:carraze/main_page.dart';
 import 'package:carraze/features/splach/splach_view.dart';
 import 'package:carraze/features/splach/wlcome_view.dart';
 import 'package:go_router/go_router.dart';
@@ -15,5 +16,6 @@ final router = GoRouter(
     ),
     GoRoute(path: RouteNames.login, builder: (context, state) => Login()),
     GoRoute(path: RouteNames.signUp, builder: (context, state) => SignUp()),
+    GoRoute(path: RouteNames.home, builder: (context, state) => HomePage()),
   ],
 );
