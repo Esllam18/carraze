@@ -67,6 +67,7 @@ class _HomeBodyViewState extends State<HomeBodyView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Colors.transparent,
 
         elevation: 0,

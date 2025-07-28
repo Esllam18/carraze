@@ -75,6 +75,8 @@ class _AddCarPageState extends State<AddCarPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
         elevation: 0,
         title: CustomText(
@@ -82,10 +84,6 @@ class _AddCarPageState extends State<AddCarPage> {
           fontSize: 24,
           fontWeight: FontWeight.bold,
           color: Colors.white,
-        ),
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.white),
-          onPressed: () => context.pushReplacement('/home'),
         ),
       ),
       body: SingleChildScrollView(

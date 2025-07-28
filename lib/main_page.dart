@@ -2,6 +2,7 @@ import 'package:carraze/features/add_car/presentation/pages/add_car_page.dart';
 import 'package:carraze/features/home/presentation/home_view_body.dart';
 
 import 'package:carraze/features/home/presentation/widgets/drawer.dart';
+import 'package:carraze/features/profil/presentation/pages/profile_view.dart.dart';
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart'; // Assuming GoRouter for navigation
@@ -28,7 +29,7 @@ class _HomePageState extends State<HomePage> {
     final List<Widget> widgetOptions = <Widget>[
       HomeBodyView(),
       isAdmin ? AddCarPage() : Center(child: Text('Favorites')),
-      Center(child: Text('Profile')),
+      ProfileView(),
       Center(child: Text('Search')),
     ];
     return Scaffold(
