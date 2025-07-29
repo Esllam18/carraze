@@ -1,8 +1,10 @@
 import 'package:carraze/features/add_car/presentation/pages/add_car_page.dart';
+import 'package:carraze/features/fiv%20feature/favorites_page.dart';
 import 'package:carraze/features/home/presentation/home_view_body.dart';
 
 import 'package:carraze/features/home/presentation/widgets/drawer.dart';
 import 'package:carraze/features/profil/presentation/pages/profile_view.dart.dart';
+import 'package:carraze/features/saerch/presentation/pages/search_page.dart';
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart'; // Assuming GoRouter for navigation
@@ -22,15 +24,15 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  bool isAdmin = true;
+  bool isAdmin = false;
 
   @override
   Widget build(BuildContext context) {
     final List<Widget> widgetOptions = <Widget>[
       HomeBodyView(),
-      isAdmin ? AddCarPage() : Center(child: Text('Favorites')),
+      isAdmin ? AddCarPage() : FavoritesPage(),
       ProfileView(),
-      Center(child: Text('Search')),
+      SearchPage(),
     ];
     return Scaffold(
       drawer: CustomDrawer(

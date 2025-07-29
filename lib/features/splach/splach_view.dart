@@ -26,13 +26,13 @@ class _SplachViewState extends State<SplashView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/splas.jpeg"),
-            fit: BoxFit.cover,
-          ),
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        child: Image.asset(
+          "assets/splas.jpeg",
+          width: MediaQuery.of(context).size.width * .9,
+          height: MediaQuery.of(context).size.height * .9,
+          fit: BoxFit.cover,
         ),
       ),
     );

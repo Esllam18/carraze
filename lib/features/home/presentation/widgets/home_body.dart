@@ -59,7 +59,7 @@ class HomeBody extends StatelessWidget {
               ),
               itemCount: carItems.length,
               itemBuilder: (context, index) {
-                return buildCarCard(car: carItems[index]);
+                return buildCarCard(car: carItems[index], context: context);
               },
             ),
           ),

@@ -1,3 +1,4 @@
+import 'package:carraze/core/router/route_names.dart';
 import 'package:carraze/core/widgets/custom_button.dart';
 import 'package:carraze/core/widgets/custom_snackbar.dart';
 import 'package:carraze/core/widgets/custom_text.dart';
@@ -78,7 +79,9 @@ class ProfileView extends StatelessWidget {
                       context,
                       icon: Icons.info_outline,
                       title: 'Info',
-                      onTap: () {},
+                      onTap: () {
+                        GoRouter.of(context).push(RouteNames.userIfon);
+                      },
                     ),
 
                     const Divider(color: Colors.white24, height: 1),
@@ -86,7 +89,9 @@ class ProfileView extends StatelessWidget {
                       context,
                       icon: Icons.settings,
                       title: 'Account Settings',
-                      onTap: () {},
+                      onTap: () {
+                        GoRouter.of(context).push(RouteNames.accountSettings);
+                      },
                     ),
                     const Divider(color: Colors.white24, height: 1),
                     buildProfileOption(
@@ -106,7 +111,9 @@ class ProfileView extends StatelessWidget {
                       context,
                       icon: Icons.payment,
                       title: 'Payment Methods',
-                      onTap: () => context.push('/payment-methods'),
+                      onTap: () {
+                        GoRouter.of(context).push(RouteNames.paymentMethods);
+                      },
                     ),
                   ],
                 ),

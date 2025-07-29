@@ -5,7 +5,12 @@ class RouteNames {
   static const String login = '/login';
   static const String signUp = '/sign-up';
   static const String profile = '/profile';
-  static const String car = '/car';
-  static const String carList = '/car-list';
-  static const String carDetail = '/car-detail';
+  static const String carDetail = '/carDetail';
+  static const String favorites = '/favorites';
+  static const String userIfon = '/user-info';
+  static const String editProfile = '/edit-profile';
+  static const String accountSettings = '/account-settings';
+  static const String changePassword = '/change-password';
+  static const String paymentMethods = '/payment-methods';
+  static const String search = '/search';
 }
