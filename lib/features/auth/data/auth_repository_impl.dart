@@ -46,11 +46,12 @@ class AuthRepositoryImpl implements AuthRepository {
       final storageRef = FirebaseStorage.instance.ref().child(
         'profile_images/${DateTime.now().millisecondsSinceEpoch}.jpg',
       );
-      // ignore: unused_local_variable
-      final uploadTask = await storageRef.putFile(imageFile);
+      await storageRef.putFile(imageFile);
       final downloadUrl = await storageRef.getDownloadURL();
+      print('Image uploaded successfully. URL: $downloadUrl');
       return downloadUrl;
     } catch (e) {
+      print('Image upload failed: $e');
       throw Exception('Image upload failed: $e');
     }
   }

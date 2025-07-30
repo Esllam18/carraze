@@ -222,7 +222,14 @@ class _SignUpState extends State<SignUp> {
                                   phone: _numberController.text.trim(),
                                   info: _infoController.text,
                                   image: _image!,
-                                );
+                                )
+                                .catchError((e) {
+                                  CustomSnackBar.show(
+                                    context,
+                                    message: 'An error occurred: $e',
+                                    type: SnackBarType.error,
+                                  );
+                                });
                           },
                         ),
                       ],

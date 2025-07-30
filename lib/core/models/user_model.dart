@@ -4,7 +4,7 @@ class UserModel {
   final String name;
   final String phone;
   final String info;
-  final String? image;
+  final String? image; // Made image nullable
 
   UserModel({
     required this.uid,
@@ -17,12 +17,12 @@ class UserModel {
 
   factory UserModel.fromMap(Map<String, dynamic> map) {
     return UserModel(
-      uid: map['uid'] ?? '',
-      email: map['email'] ?? '',
-      name: map['name'] ?? '',
-      phone: map['phone'] ?? '',
-      info: map['info'] ?? '',
-      image: map['image'], // ممكن تكون null ومفيش مشكلة
+      uid: map['uid'] as String,
+      email: map['email'] as String,
+      name: map['name'] as String,
+      phone: map['phone'] as String,
+      info: map['info'] as String,
+      image: map['image'] as String,
     );
   }
 

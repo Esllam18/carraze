@@ -1,4 +1,5 @@
 import 'package:carraze/core/router/route_names.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -18,7 +19,11 @@ class _SplachViewState extends State<SplashView> {
       GoRouter.of(
         // ignore: use_build_context_synchronously
         context,
-      ).replace(RouteNames.welcome); // Adjust the route as needed
+      ).replace(
+        FirebaseAuth.instance.currentUser == null
+            ? RouteNames.welcome
+            : RouteNames.home,
+      ); // Adjust the route as needed
     });
   }
 
