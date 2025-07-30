@@ -1,3 +1,4 @@
+import 'package:carraze/core/router/route_names.dart';
 import 'package:carraze/core/widgets/custom_snackbar.dart';
 import 'package:carraze/core/widgets/custom_text.dart';
 import 'package:carraze/core/widgets/custom_button.dart';
@@ -13,22 +14,7 @@ class FavoritesPage extends StatefulWidget {
 }
 
 class _FavoritesPageState extends State<FavoritesPage> {
-  final List<Map<String, String>> favoriteCars = [
-    {
-      'name': 'Toyota Camry',
-      'manufacturer': 'Toyota',
-      'model': 'Camry',
-      'year': '2023',
-      'imagePath': 'assets/car2.jpg',
-    },
-    {
-      'name': 'BMW X5',
-      'manufacturer': 'BMW',
-      'model': 'X5',
-      'year': '2022',
-      'imagePath': 'assets/car3.jpg',
-    },
-  ];
+  final List<Map<String, String>> favoriteCars = [];
 
   void _removeFavorite(String carName) {
     setState(() {
@@ -47,6 +33,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
+        centerTitle: true,
         title: CustomText(
           txt: 'Favorites',
           fontSize: 24,
@@ -151,7 +138,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
           ),
         ),
         onTap: () {
-          context.push('/car-details');
+          GoRouter.of(context).push(RouteNames.carDetail, extra: car);
           // Pass car details if needed, e.g., extra: car
         },
       ),

@@ -353,6 +353,7 @@ class _SearchPageState extends State<SearchPage> {
           ),
         ),
         child: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
           padding: const EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
